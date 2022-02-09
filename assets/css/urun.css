@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.duvar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 50vh;
+	background: whitesmoke;
+
+}
+
+.kutu{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 1200px;
+	transform-style: preserve-3d;
+	background-color: transparent;
+
+}
+.kutu .box{
+
+	position: relative;
+	width: 300px;
+	height: 600px;
+	margin: 40px;
+	background: #232323;
+	border-radius: 20px;
+	transform-style: preserve-3d;
+}
+
+.kutu .box::before{
+	content: 'İLAÇ';
+	position: absolute;
+	top: 90px;
+	left: 80px;
+	font-size: 4em;
+	font-weight: 400;
+	color: lightgray;
+	font-style: italic;
+	opacity: 0;
+
+}
+.kutu .box::after{
+	content: 'TARİF';
+	position: absolute;
+	bottom: 90px;
+	left: 70px;
+	font-size: 4em;
+	font-weight: 400;
+	color: lightgray;
+	font-style: italic;
+	opacity: 0;
+	transition: 0.5s;
+
+}
+.kutu .box:hover::before,
+.kutu .box:hover::after{
+
+	opacity: 0.04;
+
+}
+
+.kutu .box .name{
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	transform-style: preserve-3d;
+	transform: translate3d(0px, 0px, 75px);
+	transition: 0.5s;
+	opacity: 0;
+	z-index: 10;
+
+}
+
+.kutu .box:hover .name{
+	top: 40px;
+	opacity: 1;
+
+}
+
+.kutu .box .buy{
+
+	position: absolute;
+	bottom: 0;
+	left: 70;
+	transform-style: preserve-3d;
+	transform: translate3d(140%, 0px, 75px);
+	color: #fff;
+	background: #333;
+	padding: 10px 25px;
+	border-radius: 30px;
+	text-decoration: none;
+	transition: 0.5s;
+	opacity: 0;
+	z-index: 10;
+
+}
+
+.kutu .box:hover .buy{
+	bottom: 30px;
+	opacity: 1;
+
+}
+
+.kutu .box .details{
+
+	position: absolute;
+	bottom: 0;
+	left: 50;
+	transform-style: preserve-3d;
+	transform: translate3d(20%, 0px, 75px);
+	color: #fff;
+	background: #333;
+	padding: 10px 25px;
+	border-radius: 30px;
+	text-decoration: none;
+	transition: 0.5s;
+	opacity: 0;
+	z-index: 10;
+
+}
+
+.kutu .box:hover .details{
+	bottom: 30px;
+	opacity: 1;
+
+}
+
+.kutu .box .circle{
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	transition: 0.5s;
+	background: #000000;
+	transform-style: preserve-3d;	
+	z-index: 15;
+	opacity: 1;
+	transform: translate3d(-50%, -50%, -50px);
+
+
+
+}
+.kutu .box .product{
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	max-width: 250px;
+	transition: 0.5s;
+	z-index: 11;
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	transform: translate3d(-50%, -50%, 0px) rotate(0deg);
+}
+.kutu .box:hover .product
+{
+	transform: translate3d(-50%, -50%, 100px) rotate(0deg);
+}
+
+.kutu .box:nth-child(1) .circle,
+.kutu .box:nth-child(1) .buy{
+
+	background: #379bf7;
+
+}
+
+.kutu .box:nth-child(2) .circle,
+.kutu .box:nth-child(2) .buy{
+
+	background: #379bf7;
+
+}
+
+.kutu .box:nth-child(3) .circle,
+.kutu .box:nth-child(3) .buy{
+
+	background: #379bf7;
+
+}
